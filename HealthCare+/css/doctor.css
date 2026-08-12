@@ -1,0 +1,96 @@
+/* ---------- Filter / Search bar ---------- */
+.toolbar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 34px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+.toolbar input[type="text"],
+.toolbar select {
+  padding: 11px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  font-family: inherit;
+  font-size: 0.94rem;
+  background: var(--mint-50);
+  color: var(--ink-900);
+}
+.toolbar input[type="text"] { flex: 1; min-width: 200px; }
+.toolbar input:focus, .toolbar select:focus { border-color: var(--teal-700); }
+.result-count { font-size: 0.85rem; color: var(--ink-600); margin-bottom: 18px; }
+
+/* ---------- Doctor cards ---------- */
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.doctor-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  animation: card-in 0.4s ease both;
+}
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.doctor-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.doctor-photo {
+  height: 150px;
+  background: linear-gradient(135deg, var(--teal-700), var(--teal-900));
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.doctor-body { padding: 18px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.doctor-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--teal-900); }
+.doctor-spec {
+  display: inline-block;
+  background: var(--mint-100);
+  color: var(--teal-700);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+.doctor-meta { font-size: 0.85rem; color: var(--ink-600); }
+.doctor-rating { color: var(--coral-500); font-size: 0.9rem; letter-spacing: 1px; }
+.doctor-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 10px; margin-top: auto;
+  border-top: 1px dashed var(--line);
+}
+.doctor-fee { font-family: var(--font-display); font-weight: 600; color: var(--teal-900); }
+.doctor-fee span { font-size: 0.75rem; color: var(--ink-600); font-family: var(--font-body); display: block; }
+.book-btn {
+  background: var(--teal-900);
+  color: var(--white);
+  padding: 9px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+.book-btn:hover { background: var(--coral-500); }
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--ink-600);
+  background: var(--white);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius-md);
+}

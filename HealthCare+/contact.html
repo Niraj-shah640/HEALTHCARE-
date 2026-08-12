@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact Us | HealthCare+</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/contact.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Health<span class="plus">Care+</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="appointment.html" class="nav-cta">Book Now</a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Get in Touch</span>
+    <h1>We're here to help</h1>
+    <p>Questions about a booking or a doctor's availability? Reach out any time.</p>
+  </section>
+
+  <section class="section container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p>Our support team responds within a few hours, every day of the week.</p>
+        <div class="contact-line">
+          <span class="ico">📍</span>
+          <span>221B Anna Salai, Chennai, Tamil Nadu, India 600126</span>
+        </div>
+        <div class="contact-line">
+          <span class="ico">📞</span>
+          <span>+91 76329 46446</span>
+        </div>
+        <div class="contact-line">
+          <span class="ico">✉️</span>
+          <span>support@healthcareplus.example</span>
+        </div>
+        <div class="contact-line">
+          <span class="ico">🕒</span>
+          <span>Mon – Sat, 8:00 AM – 9:00 PM</span>
+        </div>
+      </div>
+
+      <form class="form-card" id="contactForm">
+        <div class="field-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" placeholder="e.g. John Carter" />
+        </div>
+        <div class="field-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" placeholder="you@example.com" />
+        </div>
+        <div class="field-group">
+          <label for="contactMessage">Message</label>
+          <textarea id="contactMessage" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo">Health<span class="plus">Care+</span></div>
+      <p>Book trusted doctors online — simple, fast, and transparent.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Specializations</h4>
+      <ul>
+        <li><a href="doctors.html">Cardiologist</a></li>
+        <li><a href="doctors.html">Dentist</a></li>
+        <li><a href="doctors.html">Pediatrician</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HealthCare+. Built for learning purposes.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thanks for reaching out! We'll get back to you soon.");
+    this.reset();
+  });
+</script>
+</body>
+</html>

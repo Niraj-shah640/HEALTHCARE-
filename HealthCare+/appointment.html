@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book Appointment | HealthCare+</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/appointment.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Health<span class="plus">Care+</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="doctors.html">Doctors</a></li>
+      <li><a href="appointment.html" class="active">Appointment</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="appointment.html" class="nav-cta">Book Now</a>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+  <section class="page-hero container">
+    <span class="eyebrow">Book Appointment</span>
+    <h1>Schedule your visit</h1>
+    <p>Fill in your details below. You'll see a live summary before confirming.</p>
+  </section>
+
+  <section class="section container">
+    <div class="appointment-layout">
+
+      <!-- ===== Form ===== -->
+      <form class="form-card" id="appointmentForm" novalidate>
+        <div class="field-row">
+          <div class="field-group">
+            <label for="patientName">Patient Name</label>
+            <input type="text" id="patientName" placeholder="e.g. John Carter" />
+            <span class="error-text" id="patientNameError"></span>
+          </div>
+          <div class="field-group">
+            <label for="patientAge">Age</label>
+            <input type="number" id="patientAge" min="1" max="120" placeholder="e.g. 32" />
+            <span class="error-text" id="patientAgeError"></span>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="patientGender">Gender</label>
+            <select id="patientGender">
+              <option value="">Select gender</option>
+              <option value="Female">Female</option>
+              <option value="Male">Male</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="error-text" id="patientGenderError"></span>
+          </div>
+          <div class="field-group">
+            <label for="patientPhone">Phone Number</label>
+            <input type="tel" id="patientPhone" placeholder="10-digit number" />
+            <span class="error-text" id="patientPhoneError"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="patientEmail">Email</label>
+          <input type="email" id="patientEmail" placeholder="you@example.com" />
+          <span class="error-text" id="patientEmailError"></span>
+        </div>
+
+        <div class="field-group">
+          <label for="doctorSelect">Doctor</label>
+          <select id="doctorSelect"></select>
+          <span class="error-text" id="doctorSelectError"></span>
+        </div>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="dateInput">Appointment Date</label>
+            <input type="date" id="dateInput" />
+            <span class="error-text" id="dateInputError"></span>
+          </div>
+          <div class="field-group">
+            <label for="timeSelect">Time Slot</label>
+            <select id="timeSelect"></select>
+            <span class="error-text" id="timeSelectError"></span>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="symptoms">Symptoms</label>
+          <textarea id="symptoms" placeholder="Briefly describe what you're experiencing…"></textarea>
+          <span class="error-text" id="symptomsError"></span>
+        </div>
+
+        <div style="display:flex; gap:12px; margin-top:8px;">
+          <button type="submit" class="btn btn-primary">Book Appointment</button>
+          <button type="button" id="clearFormBtn" class="btn btn-outline">Clear Form</button>
+        </div>
+      </form>
+
+      <!-- ===== Live Summary ===== -->
+      <aside class="summary-card">
+        <h3 class="summary-title">Appointment Summary</h3>
+        <div id="summaryBody"></div>
+      </aside>
+
+    </div>
+  </section>
+</main>
+
+<!-- ===== Success Notification ===== -->
+<div class="notification" id="notification">
+  <div class="check">✔</div>
+  <div>
+    <h4>Appointment Confirmed</h4>
+    <p>Your appointment has been booked.</p>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="logo">Health<span class="plus">Care+</span></div>
+      <p>Book trusted doctors online — simple, fast, and transparent.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="appointment.html">Appointment</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Specializations</h4>
+      <ul>
+        <li><a href="doctors.html">Cardiologist</a></li>
+        <li><a href="doctors.html">Dentist</a></li>
+        <li><a href="doctors.html">Pediatrician</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="contact.html">Get in Touch</a></li>
+        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HealthCare+. Built for learning purposes.</div>
+</footer>
+
+<script src="js/doctors.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/notification.js"></script>
+<script src="js/appointment.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
